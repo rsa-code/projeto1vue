@@ -12,7 +12,7 @@
       </div>
     </transition>
 
-    <!-- Passando searchQuery e genreFilter como props -->
+    
     <Filters 
       :searchQuery="searchQuery" 
       :genreFilter="genreFilter" 

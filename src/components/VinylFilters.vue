@@ -25,17 +25,17 @@
   <script setup>
   import { ref, watch } from 'vue';
   
-  // Props para searchQuery e genreFilter passadas pelo componente pai
+  
   const props = defineProps({
     searchQuery: String,
     genreFilter: String
   });
   
-  // Variáveis internas para controle de alteração local
+  
   const localSearchQuery = ref(props.searchQuery);
   const localGenreFilter = ref(props.genreFilter);
   
-  // Emitir os eventos para o componente pai quando houver alterações
+  
   const emit = defineEmits(['update-search-query', 'update-genre-filter']);
   
   const updateSearchQuery = () => {
@@ -46,7 +46,7 @@
     emit('update-genre-filter', localGenreFilter.value);
   };
   
-  // Observar mudanças nos valores para atualizar as props no componente pai
+  
   watch(() => props.searchQuery, (newVal) => {
     localSearchQuery.value = newVal;
   });
